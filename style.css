@@ -243,7 +243,6 @@ header p {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px;
     padding: 0 18px 14px;
 }
 
