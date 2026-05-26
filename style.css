@@ -1,0 +1,393 @@
+:root {
+    /* Azul escuro premium em degradê */
+    --cor-fundo-1: #020617;
+    --cor-fundo-2: #020b3a;
+    --cor-fundo-3: #001b4d;
+
+    /* Dourado para texto e destaques */
+    --cor-texto: #f5e6c8;
+    --cor-destaque: #d4af37;
+    --cor-destaque-suave: #b8962b;
+    --cor-borda: rgba(212, 175, 55, 0.35);
+    /* NOVAS VARIÁVEIS PARA O BOTÃO */
+    --cor-botao-fundo: #d4af37; /* Fundo do botão */
+    --cor-botao-texto: #020617; /* Texto do botão */
+    --cor-botao-hover: #fce7b2; /* Fundo do botão ao passar o mouse */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--cor-texto);
+    background: radial-gradient(circle at top, #001b4d 0, #020b3a 40%, #020617 100%);
+}
+
+/* BLOCO DAS LOGOS FORA DO CARD */
+.branding-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;   /* espaço do topo da página */
+    margin-bottom: 75px; /* espaço entre logos e o card azul */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.logo-container img {
+    max-height: 70px;
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.35));
+}
+
+.logo-divider {
+    height: 60px;
+    width: 2px;
+    background-color: var(--cor-destaque);
+    opacity: 0.6;
+    border-radius: 1px;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto 24px;
+    padding: 24px 22px 28px;
+    background: linear-gradient(
+        145deg,
+        rgba(4, 12, 44, 0.95),
+        rgba(1, 5, 24, 0.98)
+    );
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.65),
+        0 0 0 1px rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 28px;
+}
+
+header h1 {
+    background: linear-gradient(120deg, #fce7b2, #d4af37, #f5e6c8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.4em;
+    letter-spacing: 0.03em;
+    margin: 30px 0 10px;
+}
+
+header p {
+    font-size: 1.05em;
+    color: rgba(245, 230, 200, 0.9);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.video-section {
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.video-section h2 {
+    color: var(--cor-destaque);
+    margin-bottom: 18px;
+    font-size: 1.6em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 14px;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-section p {
+    margin-top: 16px;
+    color: rgba(245, 230, 200, 0.88);
+}
+
+.call-to-action {
+    text-align: center;
+    margin: 40px 0; /* Espaçamento acima e abaixo do botão */
+}
+
+.call-to-action a.button {
+    display: inline-block;
+    background-color: var(--cor-botao-fundo);
+    color: var(--cor-botao-texto);
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.call-to-action a.button:hover {
+    background-color: var(--cor-botao-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+.faq-section {
+    margin-bottom: 32px;
+}
+
+.faq-section h2 {
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.6em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.faq-item {
+    background: radial-gradient(
+        circle at top left,
+        rgba(212, 175, 55, 0.12),
+        rgba(0, 0, 0, 0.6)
+    );
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    margin-bottom: 14px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+    background: radial-gradient(
+        circle at top left,
+        rgba(212, 175, 55, 0.18),
+        rgba(0, 0, 0, 0.7)
+    );
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    color: var(--cor-destaque-suave);
+    font-size: 1.12em;
+    font-weight: bold;
+    user-select: none;
+}
+
+.faq-question i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 18px;
+    color: rgba(245, 230, 200, 0.9);
+    font-size: 0.98em;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 18px 14px;
+}
+
+.contact-section {
+    text-align: center;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-section h2 {
+    color: var(--cor-destaque);
+    margin-bottom: 16px;
+    font-size: 1.6em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-icons a {
+    color: var(--cor-destaque);
+    font-size: 2.8em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: var(--cor-destaque-suave);
+    transform: scale(1.1);
+}
+
+.contact-section p {
+    color: rgba(245, 230, 200, 0.88);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+    font-size: 0.85em;
+    color: rgba(245, 230, 200, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .branding-wrapper {
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo-divider {
+        display: none; /* Oculta o divisor em telas menores */
+    }
+
+    .logo-container img {
+        max-height: 60px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px 18px 24px;
+    }
+
+    header h1 {
+        font-size: 2em;
+        margin: 25px 0 8px;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .video-section h2,
+    .faq-section h2,
+    .contact-section h2 {
+        font-size: 1.4em;
+    }
+
+    .faq-question {
+        font-size: 1.05em;
+        padding: 12px 16px;
+    }
+
+    .faq-answer {
+        font-size: 0.95em;
+    }
+
+    .contact-icons a {
+        font-size: 2.4em;
+    }
+
+    .call-to-action a.button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .branding-wrapper {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .logo-container img {
+        max-height: 50px;
+    }
+
+    .container {
+        padding: 18px 15px 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+        margin: 20px 0 6px;
+    }
+
+    header p {
+        font-size: 0.95em;
+    }
+
+    .video-section h2,
+    .faq-section h2,
+    .contact-section h2 {
+        font-size: 1.2em;
+    }
+
+    .faq-question {
+        font-size: 1em;
+        padding: 10px 14px;
+    }
+
+    .faq-answer {
+        font-size: 0.9em;
+    }
+
+    .contact-icons a {
+        font-size: 2em;
+    }
+
+    .call-to-action a.button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
