@@ -37,6 +37,7 @@ body {
     min-height: 100vh;
     color: var(--cor-texto);
     background: radial-gradient(circle at top, #001b4d 0, #020b3a 40%, #020617 100%);
+    background-attachment: fixed;
 }
 
 /* BLOCO DAS LOGOS FORA DO CARD */
