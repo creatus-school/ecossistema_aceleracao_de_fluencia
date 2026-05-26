@@ -24,7 +24,6 @@ html, body {
     padding: 0;
     height: 100%;
     background-color: #020617;
-    overscroll-behavior: none;
 }
 
 body {
