@@ -173,7 +173,7 @@ header p {
     letter-spacing: 0.05em;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-    margin-bottom: 20px; /* Adiciona espaço abaixo do primeiro botão */
+    margin-bottom: 50px; /* Adiciona espaço abaixo do primeiro botão */
 }
 
 /* Estilo específico para o segundo botão, se precisar de algo diferente */
