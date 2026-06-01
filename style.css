@@ -152,17 +152,17 @@ header p {
     color: rgba(245, 230, 200, 0.88);
 }
 
-/* NOVO ESTILO: BOTÃO DE CALL TO ACTION */
 .call-to-action {
     text-align: center;
-    margin: 40px 0; /* Espaçamento acima e abaixo do botão */
-    display: flex; /* Adicionado */
-    flex-direction: column; /* Adicionado para empilhar os botões */
-    align-items: center; /* Adicionado para centralizar os botões */
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* ADICIONE ESTA LINHA para criar o espaço entre os itens flex */
 }
 
 .call-to-action a.button {
-    display: inline-block; /* Pode mudar para 'block' se quiser que o botão ocupe a largura total disponível */
+    display: inline-block; /* Mantenha como inline-block ou mude para block se preferir */
     background-color: var(--cor-botao-fundo);
     color: var(--cor-botao-texto);
     padding: 15px 30px;
@@ -173,16 +173,6 @@ header p {
     letter-spacing: 0.05em;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-    margin-bottom: 50px; /* Adiciona espaço abaixo do primeiro botão */
-}
-
-/* Estilo específico para o segundo botão, se precisar de algo diferente */
-.call-to-action a.second-button {
-    margin-top: 40; /* Garante que não haja margem extra em cima */
-    margin-bottom: 0; /* O último botão não precisa de margem inferior */
-    /* Se quiser cores diferentes, pode definir aqui: */
-    /* background-color: #fce7b2; */
-    /* color: #020617; */
 }
 
 .call-to-action a.button:hover {
