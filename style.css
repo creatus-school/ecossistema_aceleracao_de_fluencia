@@ -178,7 +178,7 @@ header p {
 
 /* Estilo específico para o segundo botão, se precisar de algo diferente */
 .call-to-action a.second-button {
-    margin-top: 0; /* Garante que não haja margem extra em cima */
+    margin-top: 40; /* Garante que não haja margem extra em cima */
     margin-bottom: 0; /* O último botão não precisa de margem inferior */
     /* Se quiser cores diferentes, pode definir aqui: */
     /* background-color: #fce7b2; */
