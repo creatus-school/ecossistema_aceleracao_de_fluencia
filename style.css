@@ -270,7 +270,240 @@ header p {
 }
 
 /* Ajustes para telas menores */
+/* Valor especial da parceria */
+.partnership-value {
+    max-width: 620px;
+    margin: 18px auto 0;
+    padding: 24px 20px;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        rgba(15, 118, 110, 0.28),
+        rgba(2, 11, 58, 0.85)
+    );
+    border: 2px solid #38bdb1;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(56, 189, 177, 0.18);
+}
+
+.partnership-value p {
+    margin: 0 0 8px;
+    color: rgba(245, 230, 200, 0.95);
+    font-size: 1.05em;
+    font-weight: 600;
+}
+
+.partnership-value strong {
+    display: block;
+    color: #72e6da;
+    font-size: 2.1em;
+    line-height: 1.2;
+}
+
+.partnership-value span {
+    display: block;
+    margin-top: 8px;
+    color: rgba(245, 230, 200, 0.8);
+    font-size: 0.9em;
+}
+
+/* Botões de compra */
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.call-to-action a.button {
+    display: block;
+    width: min(100%, 700px);
+    margin: 0;
+    padding: 15px 30px;
+    background-color: var(--cor-botao-fundo);
+    color: var(--cor-botao-texto);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.35;
+    letter-spacing: 0.05em;
+    text-align: center;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.call-to-action a.button:hover {
+    background-color: var(--cor-botao-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+/* FAQ */
+.faq-section {
+    margin-bottom: 32px;
+}
+
+.faq-section h2 {
+    margin-bottom: 20px;
+    color: var(--cor-destaque);
+    text-align: center;
+    font-size: 1.6em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.faq-item {
+    margin-bottom: 14px;
+    padding: 0;
+    overflow: hidden;
+    background: radial-gradient(
+        circle at top left,
+        rgba(212, 175, 55, 0.12),
+        rgba(0, 0, 0, 0.6)
+    );
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+    background: radial-gradient(
+        circle at top left,
+        rgba(212, 175, 55, 0.18),
+        rgba(0, 0, 0, 0.7)
+    );
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+    padding: 14px 18px;
+    color: var(--cor-destaque-suave);
+    font-size: 1.12em;
+    font-weight: bold;
+    line-height: 1.45;
+    user-select: none;
+}
+
+.faq-question h3 {
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.faq-question i {
+    flex: 0 0 auto;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 18px;
+    color: rgba(245, 230, 200, 0.9);
+    font-size: 0.98em;
+    line-height: 1.6;
+    transition:
+        max-height 0.4s ease-out,
+        padding 0.4s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 18px 14px;
+}
+
+/* Contato */
+.contact-section {
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 16px;
+    color: var(--cor-destaque);
+    font-size: 1.6em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-icons a {
+    color: var(--cor-destaque);
+    font-size: 2.8em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: var(--cor-destaque-suave);
+    transform: scale(1.1);
+}
+
+.contact-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: rgba(245, 230, 200, 0.88);
+}
+
+footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 25px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    color: rgba(245, 230, 200, 0.6);
+    font-size: 0.85em;
+    text-align: center;
+}
+
+/* Tablet e celular */
 @media (max-width: 768px) {
+    .branding-wrapper {
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+
+    .logo-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .logo-divider {
+        display: block;
+    }
+
+    .logo-container img {
+        max-height: 60px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px 18px 24px;
+    }
+
     .value-section {
         margin: 50px auto 35px;
     }
@@ -298,225 +531,14 @@ header p {
         padding: 22px 16px;
     }
 
-    .total-value strong {
-        font-size: 1.8em;
-    }
-
-    .partnership-value {
-    max-width: 620px;
-    margin: 18px auto 0;
-    padding: 24px 20px;
-    text-align: center;
-    background: linear-gradient(
-        135deg,
-        rgba(15, 118, 110, 0.28),
-        rgba(2, 11, 58, 0.85)
-    );
-    border: 2px solid #38bdb1;
-    border-radius: 18px;
-    box-shadow: 0 8px 30px rgba(56, 189, 177, 0.18);
-    }
-
-.partnership-value p {
-    margin: 0 0 8px;
-    color: rgba(245, 230, 200, 0.95);
-    font-size: 1.05em;
-    font-weight: 600;
-}
-
-.partnership-value strong {
-    display: block;
-    color: #72e6da;
-    font-size: 2.1em;
-    line-height: 1.2;
-}
-
-.partnership-value span {
-    display: block;
-    margin-top: 8px;
-    color: rgba(245, 230, 200, 0.8);
-    font-size: 0.9em;
-}
-
-@media (max-width: 768px) {
-    .partnership-value {
-        margin-top: 15px;
-        padding: 22px 16px;
-    }
-
+    .total-value strong,
     .partnership-value strong {
         font-size: 1.8em;
     }
 
-.call-to-action {
-    text-align: center;
-    margin: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* ADICIONE ESTA LINHA para criar o espaço entre os itens flex */
-}
-
-.call-to-action a.button {
-    display: inline-block; /* Mantenha como inline-block ou mude para block se preferir */
-    background-color: var(--cor-botao-fundo);
-    color: var(--cor-botao-texto);
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    letter-spacing: 0.05em;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-}
-
-.call-to-action a.button:hover {
-    background-color: var(--cor-botao-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
-}
-
-.faq-section {
-    margin-bottom: 32px;
-}
-
-.faq-section h2 {
-    color: var(--cor-destaque);
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 1.6em;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-.faq-item {
-    background: radial-gradient(
-        circle at top left,
-        rgba(212, 175, 55, 0.12),
-        rgba(0, 0, 0, 0.6)
-    );
-    border: 1px solid var(--cor-borda);
-    border-radius: 12px;
-    margin-bottom: 14px;
-    padding: 0;
-    overflow: hidden;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.faq-item:hover {
-    background: radial-gradient(
-        circle at top left,
-        rgba(212, 175, 55, 0.18),
-        rgba(0, 0, 0, 0.7)
-    );
-}
-
-.faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 18px;
-    color: var(--cor-destaque-suave);
-    font-size: 1.12em;
-    font-weight: bold;
-    user-select: none;
-}
-
-.faq-question i {
-    margin-left: 10px;
-    transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-question i {
-    transform: rotate(180deg);
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-    padding: 0 18px;
-    color: rgba(245, 230, 200, 0.9);
-    font-size: 0.98em;
-}
-
-.faq-item.active .faq-answer {
-    padding: 0 18px 14px;
-}
-
-.contact-section {
-    text-align: center;
-    padding-top: 22px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.contact-section h2 {
-    color: var(--cor-destaque);
-    margin-bottom: 16px;
-    font-size: 1.6em;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-}
-
-.contact-icons {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 20px;
-}
-
-.contact-icons a {
-    color: var(--cor-destaque);
-    font-size: 2.8em;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.contact-icons a:hover {
-    color: var(--cor-destaque-suave);
-    transform: scale(1.1);
-}
-
-.contact-section p {
-    color: rgba(245, 230, 200, 0.88);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-footer {
-    text-align: center;
-    padding: 25px 20px;
-    margin-top: 40px;
-    font-size: 0.85em;
-    color: rgba(245, 230, 200, 0.6);
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    .branding-wrapper {
-        margin-top: 60px;
-        margin-bottom: 50px;
-    }
-
-    .logo-container {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 22px;
-    }
-
-    .logo-divider {
-        display: block;
-        
-    .logo-container img {
-        max-height: 60px;
-    }
-
-    .container {
-        width: 95%;
-        padding: 20px 18px 24px;
+    .partnership-value {
+        margin-top: 15px;
+        padding: 22px 16px;
     }
 
     header h1 {
@@ -535,8 +557,8 @@ footer {
     }
 
     .faq-question {
-        font-size: 1.05em;
         padding: 12px 16px;
+        font-size: 1.05em;
     }
 
     .faq-answer {
@@ -553,14 +575,24 @@ footer {
     }
 }
 
+/* Celulares menores */
 @media (max-width: 480px) {
     .branding-wrapper {
         margin-top: 40px;
         margin-bottom: 30px;
     }
 
+    .logo-container {
+        gap: 12px;
+    }
+
     .logo-container img {
+        max-width: 42vw;
         max-height: 50px;
+    }
+
+    .logo-divider {
+        height: 45px;
     }
 
     .container {
@@ -568,8 +600,8 @@ footer {
     }
 
     header h1 {
-        font-size: 1.8em;
         margin: 20px 0 6px;
+        font-size: 1.8em;
     }
 
     header p {
@@ -583,12 +615,21 @@ footer {
     }
 
     .faq-question {
-        font-size: 1em;
+        gap: 10px;
         padding: 10px 14px;
+        font-size: 1em;
     }
 
     .faq-answer {
+        padding-left: 14px;
+        padding-right: 14px;
         font-size: 0.9em;
+    }
+
+    .faq-item.active .faq-answer {
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 14px;
     }
 
     .contact-icons a {
@@ -596,7 +637,8 @@ footer {
     }
 
     .call-to-action a.button {
-        font-size: 1em;
+        width: 100%;
         padding: 10px 20px;
+        font-size: 1em;
     }
 }
