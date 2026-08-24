@@ -184,10 +184,11 @@ header p {
 
 .value-card {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 14px;
     padding: 24px 20px;
-    text-align: left;
+    text-align: center;
     background: linear-gradient(
         145deg,
         rgba(30, 32, 43, 0.98),
@@ -211,7 +212,7 @@ header p {
 .value-card h3 {
     margin: 0 0 10px;
     color: #d4af37;
-    font-size: 1.15em;
+    font-size: 1.4em;
     line-height: 1.35;
 }
 
