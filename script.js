@@ -1,24 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item');
+document.addEventListener("DOMContentLoaded", () => {
+    const faqItems = document.querySelectorAll(".faq-item");
 
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
+    faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
 
-        question.addEventListener('click', () => {
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item && otherItem.classList.contains('active')) {
-                    otherItem.classList.remove('active');
-                    otherItem.querySelector('.faq-answer').style.maxHeight = null;
+        if (!question || !answer) return;
+
+        question.addEventListener("click", () => {
+            const isActive = item.classList.contains("active");
+
+            faqItems.forEach((otherItem) => {
+                const otherAnswer = otherItem.querySelector(".faq-answer");
+
+                otherItem.classList.remove("active");
+
+                if (otherAnswer) {
+                    otherAnswer.style.maxHeight = "0px";
                 }
             });
 
-            item.classList.toggle('active');
+            if (!isActive) {
+                item.classList.add("active");
 
-            if (item.classList.contains('active')) {
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            } else {
-                answer.style.maxHeight = null;
+                // Aguarda o padding/classe active ser aplicado
+                requestAnimationFrame(() => {
+                    answer.style.maxHeight = `${answer.scrollHeight}px`;
+                });
             }
         });
     });
